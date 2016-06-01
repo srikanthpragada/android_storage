@@ -5,8 +5,22 @@
         jar="F:\AndroidStudioProjects\Storage\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="c4552ebf1d4f126873816ea73296f3f56d5ea851">
+        sha1="7c1e4275aa1d552dd12483b144d96d768fd9c841">
         <dex dex="F:\AndroidStudioProjects\Storage\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_1c60722e3c868830e738280b62bdbd86570fd8b9.jar" />
+    </item>
+    <item
+        jar="F:\AndroidStudioProjects\Storage\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="F:\AndroidStudioProjects\Storage\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.1.0_6793263865de280366f2a23ae7b403e18a6bce83.jar" />
+    </item>
+    <item
+        jar="F:\AndroidStudioProjects\Storage\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="F:\AndroidStudioProjects\Storage\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.1.0_f2added4fc986f241febbd65335ddcd1503ffc69.jar" />
     </item>
 
 </items>
