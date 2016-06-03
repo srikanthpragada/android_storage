@@ -40,7 +40,6 @@ public class UpdateCourseActivity extends Activity {
 				  editFee.setText(  details.getString( details.getColumnIndex( STDatabase.COURSES_FEE)));
 				  editDuration.setText(  details.getString( details.getColumnIndex( STDatabase.COURSES_DURATION)));
 				  layoutDetails.setVisibility( View.VISIBLE);
-				  
 			}
 			else{
 				  layoutDetails.setVisibility( View.INVISIBLE);

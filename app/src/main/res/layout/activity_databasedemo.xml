@@ -34,4 +34,12 @@
         android:onClick="updateCourse"
         android:text="Update Course" />
 
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="searchCourses"
+        android:text="Search Courses" />
+
 </LinearLayout>

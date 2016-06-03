@@ -32,4 +32,9 @@ public class DatabaseDemoActivity extends Activity {
 		Intent intent = new Intent(this, UpdateCourseActivity.class);
 		startActivity(intent);
 	}
+
+	public void searchCourses(View v) {
+		Intent intent = new Intent(this, SearchCoursesActivity.class);
+		startActivity(intent);
+	}
 }
