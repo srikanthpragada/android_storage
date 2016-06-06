@@ -32,10 +32,8 @@
             android:enabled="true"
             android:exported="true" />
 
-
-        <activity android:name=".SearchCoursesActivity"></activity>
-
-
+        <activity android:name=".SearchCoursesActivity" />
+        <activity android:name=".UpdateCourseRowActivity"></activity>
     </application>
 
 </manifest>

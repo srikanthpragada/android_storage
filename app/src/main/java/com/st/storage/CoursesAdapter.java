@@ -2,6 +2,7 @@ package com.st.storage;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class CoursesAdapter extends BaseAdapter {
@@ -64,7 +67,35 @@ public class CoursesAdapter extends BaseAdapter {
             btnDelete.setOnClickListener(new OnClickListener() {
 
                 public void onClick(View v) {
+                    List<Course> coures = CoursesAdapter.this.courses;
                     Log.d("Storage","About to delete course  :" + course.getId());
+                    // delete course
+                    try {
+                        STDatabase dbhelper = new STDatabase(CoursesAdapter.this.ctx);
+                        SQLiteDatabase db = dbhelper.getWritableDatabase();
+
+                        String cond = STDatabase.COURSES_ID + " = ?";
+                        int count = db.delete(STDatabase.COURSES_TABLE_NAME,cond,
+                                new String[] { String.valueOf(course.getId())});
+
+                        if (count == 1) {
+                            Toast.makeText(CoursesAdapter.this.ctx,
+                                    "Deleted Course Successfully!",
+                                    Toast.LENGTH_SHORT).show();
+                            // delete from collection
+                            for(Course c : courses) {
+                                if (c.getId() == course.getId())
+                                    courses.remove(c);
+                            }
+                        }
+                        else
+                            Toast.makeText(CoursesAdapter.this.ctx,
+                                    "Course Could not be deleted!",
+                                    Toast.LENGTH_SHORT).show();
+                    } catch (Exception ex) {
+                        Toast.makeText(CoursesAdapter.this.ctx,
+                                ex.getMessage(), Toast.LENGTH_LONG).show();
+                    }
                 }
 
             });
@@ -74,6 +105,10 @@ public class CoursesAdapter extends BaseAdapter {
 
                 public void onClick(View v) {
                     Log.d("Storage","About to update course  :" + course.getId());
+                    Intent intent = new Intent( CoursesAdapter.this.ctx,
+                              UpdateCourseRowActivity.class);
+                    intent.putExtra("id", course.getId());
+                    CoursesAdapter.this.ctx.startActivity(intent);
                 }
 
             });

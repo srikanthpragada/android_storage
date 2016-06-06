@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 public class ModifyCourseRowsActivity extends ListActivity {
     @Override
-    public void onCreate(Bundle data) {
-        super.onCreate(data);
+    public void onStart() {
+        super.onStart();
         try {
             STDatabase dbhelper = new STDatabase(this);
             SQLiteDatabase db = dbhelper.getReadableDatabase();
@@ -36,7 +36,7 @@ public class ModifyCourseRowsActivity extends ListActivity {
                 courses.add(c);
             }
             coursesCursor.close();
-
+            db.close();
             CoursesAdapter adapter = new CoursesAdapter(this, courses);
             getListView().setAdapter(adapter);
 
