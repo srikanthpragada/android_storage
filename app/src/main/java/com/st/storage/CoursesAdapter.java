@@ -87,6 +87,8 @@ public class CoursesAdapter extends BaseAdapter {
                                 if (c.getId() == course.getId())
                                     courses.remove(c);
                             }
+                            // update view about change in Adapter's data
+                            CoursesAdapter.this.notifyDataSetChanged();
                         }
                         else
                             Toast.makeText(CoursesAdapter.this.ctx,

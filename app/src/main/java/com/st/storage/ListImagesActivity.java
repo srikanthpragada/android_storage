@@ -17,7 +17,7 @@ public class ListImagesActivity extends Activity {
 				MediaStore.Images.Media.EXTERNAL_CONTENT_URI, null, null, null,
 				null);
 
-		TextView textAlbums = (TextView) this.findViewById(R.id.textAlbums);
+		TextView textImages = (TextView) this.findViewById(R.id.textAlbums);
 
 
 		while (cur.moveToNext()) {
@@ -26,7 +26,7 @@ public class ListImagesActivity extends Activity {
 					.getColumnIndex(MediaStore.Images.Media.DISPLAY_NAME);
 			String name = cur.getString(nameIndex);
 
-			textAlbums.append("Name :" + name + "\n");
+			textImages.append("Name :" + name + "\n");
 
 		}
 
