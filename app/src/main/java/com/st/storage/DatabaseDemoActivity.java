@@ -37,4 +37,9 @@ public class DatabaseDemoActivity extends Activity {
 		Intent intent = new Intent(this, SearchCoursesActivity.class);
 		startActivity(intent);
 	}
+
+	public void listFromCP(View v) {
+		Intent intent = new Intent(this, ListCourseFromCP.class);
+		startActivity(intent);
+	}
 }

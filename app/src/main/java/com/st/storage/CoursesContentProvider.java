@@ -8,6 +8,9 @@ import android.net.Uri;
 import android.util.Log;
 
 public class CoursesContentProvider extends ContentProvider {
+    public static final Uri CONTENT_URI =
+            Uri.parse("content://com.st.courses");
+
     public CoursesContentProvider() {
     }
 

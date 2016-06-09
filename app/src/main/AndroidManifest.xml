@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListImagesActivity">
+        <activity android:name=".DatabaseDemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,10 +25,18 @@
         <activity android:name=".AddCourseRowActivity" />
         <activity android:name=".ListCoursesActivity" />
         <activity android:name=".ListCourseRowsActivity" />
+        <activity android:name=".ListCourseFromCP" />
 
         <provider
             android:name=".CoursesContentProvider"
             android:authorities="com.st.courses"
+            android:enabled="true"
+            android:exported="true" />
+
+
+        <provider
+            android:name=".CountryContentProvider"
+            android:authorities="com.st.countries"
             android:enabled="true"
             android:exported="true" />
 

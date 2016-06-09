@@ -42,4 +42,12 @@
         android:onClick="searchCourses"
         android:text="Search Courses" />
 
+
+    <Button
+        android:id="@+id/btnListFromCP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="listFromCP"
+        android:text="List From CP" />
+
 </LinearLayout>

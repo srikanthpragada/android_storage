@@ -2,8 +2,6 @@ package com.st.storage;
 
 import android.app.Activity;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
@@ -16,8 +14,8 @@ public class ListCourseFromCP extends Activity {
 		setContentView(R.layout.activity_list_course_rows);
 		try {
 
-			Cursor courses = getContentResolver().query
-					 (Uri.parse("content://com.st.courses"),
+			Cursor courses = getContentResolver().query(
+					  CoursesContentProvider.CONTENT_URI,
   				      null,null,null,null);
 
 			String from [] = { "name", "fee","duration"};
