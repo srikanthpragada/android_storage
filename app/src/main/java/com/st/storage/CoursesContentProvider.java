@@ -19,7 +19,8 @@ public class CoursesContentProvider extends ContentProvider {
         STDatabase dbhelper = new STDatabase(getContext());
         SQLiteDatabase db = dbhelper.getWritableDatabase();
         try {
-            int count = db.delete(STDatabase.COURSES_TABLE_NAME, selection, selectionArgs);
+            int count = db.delete(STDatabase.COURSES_TABLE_NAME,
+                      selection, selectionArgs);
             return count;
         }
         catch(Exception ex){
