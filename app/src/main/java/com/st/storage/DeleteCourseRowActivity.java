@@ -1,7 +1,6 @@
 package com.st.storage;
 
 import android.app.Activity;
-import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,8 +29,8 @@ public class DeleteCourseRowActivity extends Activity {
 			int count = db.delete(STDatabase.COURSES_TABLE_NAME,cond,
 					   new String[] {editName.getText().toString()});
 
-            if (count == 1)
-			  Toast.makeText(this, "Deleted Course Successfully!",
+            if (count >= 1)
+			  Toast.makeText(this, "Deleted Course(s) Successfully!",
 					Toast.LENGTH_SHORT).show();
 			else
 				Toast.makeText(this, "Course Not Found!",

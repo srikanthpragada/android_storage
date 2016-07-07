@@ -1,18 +1,10 @@
 package com.st.storage;
 
-import android.app.Activity;
 import android.app.ListActivity;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
-
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -45,7 +37,8 @@ public class ListCoursesWithListViewActivity extends ListActivity {
             }
             file.close();
 
-            SimpleAdapter adapter = new SimpleAdapter(this,courses, R.layout.course_layout,
+            SimpleAdapter adapter = new SimpleAdapter(this,courses,
+                       R.layout.course_layout,
                        new String [] { "name","duration"},
                        new int[] { R.id.textName, R.id.textDuration}
                        );

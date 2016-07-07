@@ -17,7 +17,7 @@ public class STDatabase extends SQLiteOpenHelper {
 
     private static final String TABLE_CREATE_SQL =
             "CREATE TABLE " + COURSES_TABLE_NAME + "( " + COURSES_ID +
-                    " integer primary key autoincrement, " + COURSES_NAME + " TEXT,  " +
+                    " integer primary key autoincrement, " + COURSES_NAME + " TEXT  unqiue,  " +
                     COURSES_FEE + " INTEGER, " + COURSES_DURATION + " INTEGER)";
 
     public STDatabase(Context context) {

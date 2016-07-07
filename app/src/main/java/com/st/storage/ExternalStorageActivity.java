@@ -1,16 +1,13 @@
 package com.st.storage;
 
-import java.io.File;
-import java.io.FileWriter;
-
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileWriter;
 
 public class ExternalStorageActivity extends Activity {
     private TextView textMessage;
@@ -80,7 +77,7 @@ public class ExternalStorageActivity extends Activity {
     public void listFolders(View v) {
         try {
             File dir = Environment.getExternalStoragePublicDirectory
-                        (Environment.DIRECTORY_MUSIC);
+                        (Environment.DIRECTORY_PICTURES);
             if (dir.exists())
                 textMessage.append("\n" + dir.getAbsolutePath() + " is existing");
             else {

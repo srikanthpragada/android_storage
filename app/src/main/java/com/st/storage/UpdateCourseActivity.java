@@ -64,7 +64,7 @@ public class UpdateCourseActivity extends Activity {
 			// execute update command
 
 			ContentValues values = new ContentValues();
-			values.put( STDatabase.COURSES_FEE , editFee.getText().toString());
+			values.put(STDatabase.COURSES_FEE , editFee.getText().toString());
 			values.put(STDatabase.COURSES_DURATION, editDuration.getText().toString());
 
 			int count  = db.update(STDatabase.COURSES_TABLE_NAME,values,
