@@ -18,7 +18,10 @@ public class ListCourseFromCP extends Activity {
 					  CoursesContentProvider.CONTENT_URI,
   				      null,null,null,null);
 
-			String from [] = { "name", "fee","duration"};
+			String from [] = { CoursesContentProvider.COURSE_NAME,
+					           CoursesContentProvider.COURSE_FEE,
+					           CoursesContentProvider.COURSE_DURATION };
+
 			int to [] = { R.id.textName, R.id.textFee, R.id.textDuration};
 			
 			SimpleCursorAdapter ca  = new SimpleCursorAdapter(

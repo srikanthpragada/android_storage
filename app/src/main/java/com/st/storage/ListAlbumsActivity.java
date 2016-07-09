@@ -17,7 +17,6 @@ public class ListAlbumsActivity extends Activity {
 		Log.d("Storage", MediaStore.Audio.Albums.EXTERNAL_CONTENT_URI.toString());
 		Log.d("Storage", MediaStore.Images.Media.EXTERNAL_CONTENT_URI.toString());
 
-
 		Cursor cur = getContentResolver().query(
 				MediaStore.Audio.Albums.EXTERNAL_CONTENT_URI,
 				null,  // project

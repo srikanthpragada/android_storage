@@ -7,8 +7,8 @@ import android.database.MatrixCursor;
 import android.net.Uri;
 
 public class CountryContentProvider extends  ContentProvider {
-	public static final Uri CONTENT_URI = 
-            Uri.parse("content://com.st.countries");
+	public static final Uri CONTENT_URI =
+			Uri.parse("content://com.st.countries");
 	
 	public static final String  COUNTRY_ID ="_id";
 	public static final String  COUNTRY_NAME ="country_name";

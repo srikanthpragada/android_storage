@@ -11,6 +11,10 @@ public class CoursesContentProvider extends ContentProvider {
     public static final Uri CONTENT_URI =
             Uri.parse("content://com.st.courses");
 
+    public static  final String COURSE_NAME =   STDatabase.COURSES_NAME;
+    public static  final String COURSE_DURATION =   STDatabase.COURSES_DURATION;
+    public static  final String COURSE_FEE =   STDatabase.COURSES_FEE;
+
     public CoursesContentProvider() {
     }
 
@@ -36,7 +40,16 @@ public class CoursesContentProvider extends ContentProvider {
 
     @Override
     public Uri insert(Uri uri, ContentValues values) {
-       return null;
+        STDatabase dbhelper = new STDatabase(getContext());
+        SQLiteDatabase db = dbhelper.getWritableDatabase();
+        try {
+            db.insert(STDatabase.COURSES_TABLE_NAME, null,values);
+            return uri;
+        }
+        catch(Exception ex){
+            Log.d("Storage", "Error in insert() --> " + ex.getMessage());
+            return null;
+        }
     }
 
     @Override
